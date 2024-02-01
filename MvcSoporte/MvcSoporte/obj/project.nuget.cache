@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BgNSOogDswMgR/zLxAmr5363ydRf1Vj3R7623d3O0g4VYto1s1+obsrR5omMDg+CyVRWDJ4pLC0EX/g0GhuxMQ==",
+  "dgSpecHash": "EEPoGo8qRxyF6bU4/J6xNZg/i8VEEitUhRwWyv3PSrJ+J71jdx8T6A7XZuUwtKpVR9KkFsU45sx7fJtZXV75NA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\MvcSoporte\\MvcSoporte\\MvcSoporte.csproj",
+  "projectFilePath": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\servidor\\MvcSoporte\\MvcSoporte\\MvcSoporte.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xavaibmar.AULA2508\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\xavaibmar.AULA2508\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

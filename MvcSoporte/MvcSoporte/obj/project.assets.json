@@ -11067,11 +11067,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\MvcSoporte\\MvcSoporte\\MvcSoporte.csproj",
+      "projectUniqueName": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\servidor\\MvcSoporte\\MvcSoporte\\MvcSoporte.csproj",
       "projectName": "MvcSoporte",
-      "projectPath": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\MvcSoporte\\MvcSoporte\\MvcSoporte.csproj",
+      "projectPath": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\servidor\\MvcSoporte\\MvcSoporte\\MvcSoporte.csproj",
       "packagesPath": "C:\\Users\\xavaibmar.AULA2508\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\MvcSoporte\\MvcSoporte\\obj\\",
+      "outputPath": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\servidor\\MvcSoporte\\MvcSoporte\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
