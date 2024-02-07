@@ -20,10 +20,51 @@ namespace MvcColiseoVirtual.Controllers
         }
 
         // GET: Productos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string strCadenaBusqueda, string busquedaActual, int? pageNumber, int? categoriaId, int? categoriaIdActual)
         {
-            var mvcTiendaContexto = _context.Productos.Include(p => p.Categoria);
-            return View(await mvcTiendaContexto.ToListAsync());
+            if(pageNumber <= 0)
+            {
+                pageNumber = 1; 
+            }
+
+            if(strCadenaBusqueda != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                strCadenaBusqueda = busquedaActual;
+            }
+            ViewData["BusquedaActual"] = strCadenaBusqueda;
+
+            if(categoriaId != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                categoriaId = categoriaIdActual;
+            }
+            ViewData["categoriaIdActual"] = categoriaId;
+
+
+            var productos = _context.Productos.AsQueryable();
+
+            //Ordenar productos
+            productos = productos.OrderBy(x => x.Descripcion);
+
+            if (!String.IsNullOrEmpty(strCadenaBusqueda))
+            {
+                productos = productos.Where(s => s.Descripcion.Contains(strCadenaBusqueda));
+            }
+
+
+            int pageSize = 2;
+            productos = productos.Include(x => x.Categoria);
+                        productos.Include(x => x.Detalles);
+            return View(await PaginatedList<Producto>.CreateAsync(productos.AsNoTracking(),
+            pageNumber ?? 1, pageSize));
+            // return View(await _context.Productos.ToListAsync()) :
         }
 
         // GET: Productos/Details/5

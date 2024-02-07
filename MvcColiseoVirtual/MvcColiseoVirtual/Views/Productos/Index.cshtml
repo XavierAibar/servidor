@@ -1,4 +1,6 @@
-﻿@model IEnumerable<MvcColiseoVirtual.Models.Producto>
+﻿@*@model IEnumerable<MvcColiseoVirtual.Models.Producto>*@
+@model PaginatedList<MvcColiseoVirtual.Models.Producto>
+
 
 @{
     ViewData["Title"] = "Index";
@@ -13,28 +15,33 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Descripcion)
+                Nombre
+                @*@Html.DisplayNameFor(model => model.Descripcion)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Texto)
+                Texto
+                @*@Html.DisplayNameFor(model => model.Texto)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Precio)
+                Precio
+                @*@Html.DisplayNameFor(model => model.Precio)*@
+            </th>
+
+            <th>
+                Stock
+                @*@Html.DisplayNameFor(model => model.Stock)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PrecioCadena)
+                Escaparate
+                @*@Html.DisplayNameFor(model => model.Escaparate)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Stock)
+                Imagen
+                @*@Html.DisplayNameFor(model => model.Imagen)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Escaparate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Imagen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
+                Categoría
+                @*@Html.DisplayNameFor(model => model.Categoria)*@
             </th>
             <th></th>
         </tr>
@@ -90,3 +97,16 @@
 }
     </tbody>
 </table>
+@* Poner botones de página Siguiente y Anterior *@
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)"
+   class="btn btn-outline-secondary @prevDisabled">
+    Anterior
+</a>
+<a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)"
+   class="btn btn-outline-secondary @nextDisabled">
+    Siguiente
+</a>

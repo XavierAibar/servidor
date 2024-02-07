@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f3tJlIS5Jh6A2FNhiilppHQeOo/iS6ooDe3VMjWUfpBI6negxAZuyXRQu6M/arxeXE8oWdCZiI/fS8t3hPboyQ==",
+  "dgSpecHash": "YbYUEE+NaJfbQY2K4VTkSqGQYozSNXuIPqtuTw35bMdrHzrSakdm5bPbrXVDpYeSt8RB4SY24+82HWAsYCtBWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\MvcColiseoVirtual.csproj",
+  "projectFilePath": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\MvcColiseoVirtual.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xavaibmar.AULA2508\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\xavaibmar.AULA2508\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
