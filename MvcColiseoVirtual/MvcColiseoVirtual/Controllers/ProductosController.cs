@@ -22,7 +22,10 @@ namespace MvcColiseoVirtual.Controllers
         // GET: Productos
         public async Task<IActionResult> Index(string strCadenaBusqueda, string busquedaActual, int? pageNumber, int? categoriaId, int? categoriaIdActual)
         {
-            if(pageNumber <= 0)
+
+            int pageSize = 2;
+
+            if (pageNumber <= 0)
             {
                 pageNumber = 1; 
             }
@@ -30,7 +33,9 @@ namespace MvcColiseoVirtual.Controllers
             if(strCadenaBusqueda != null)
             {
                 pageNumber = 1;
+                pageSize = 50;
             }
+
             else
             {
                 strCadenaBusqueda = busquedaActual;
@@ -40,6 +45,7 @@ namespace MvcColiseoVirtual.Controllers
             if(categoriaId != null)
             {
                 pageNumber = 1;
+                pageSize = 50;
             }
             else
             {
@@ -59,7 +65,17 @@ namespace MvcColiseoVirtual.Controllers
             }
 
 
-            int pageSize = 2;
+
+            if(categoriaId == null)
+            {
+                ViewData["categoriaId"] = new SelectList(_context.Categorias, "Id", "Descripcion");
+            }
+            else
+            {
+                ViewData["categoriaId"] = new SelectList(_context.Categorias, "Id", "Descripcion", categoriaId);
+                productos = productos.Where(x => x.CategoriaId == categoriaId);
+            }
+
             productos = productos.Include(x => x.Categoria);
                         productos.Include(x => x.Detalles);
             return View(await PaginatedList<Producto>.CreateAsync(productos.AsNoTracking(),
