@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MvcColiseoVirtual;
 using MvcColiseoVirtual.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,11 +16,27 @@ builder.Services.AddDbContext<MvcTiendaContexto>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+// Configuración de los servicios de ASP.NET Core Identity
+// Configuración de los servicios de ASP.NET Core Identity
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    // Password settings. Configuración de las características de las contraseñas
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    //options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireNonAlphanumeric = false;
+    //options.Password.RequireUppercase = true;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -45,5 +62,14 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+// Crear los roles y el administrador predeterminados
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.InitializeAsync(services).Wait();
+}
+
 
 app.Run();
