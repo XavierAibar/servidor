@@ -21,10 +21,6 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-
-// Configuración de los servicios de ASP.NET Core Identity
-// Configuración de los servicios de ASP.NET Core Identity
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings. Configuración de las características de las contraseñas
@@ -37,6 +33,10 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredLength = 6;
     options.Password.RequiredUniqueChars = 1;
 });
+var app = builder.Build();
+
+// Configuración de los servicios de ASP.NET Core Identity
+// Configuración de los servicios de ASP.NET Core Identity
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
