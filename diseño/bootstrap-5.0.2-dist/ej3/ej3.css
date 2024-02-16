@@ -1,0 +1,21 @@
+.row{
+    background-color: rgb(240, 235, 235);
+}
+.centro{
+    text-align: center;
+    font-size:large;
+}
+
+#lastrow{
+    height: 200px;
+}
+#inputrow{
+    height: 35px;
+}
+
+#bot1{
+    background-color: white;
+    height:100%;
+    width: 50%;
+}
+

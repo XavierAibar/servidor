@@ -1,0 +1,98 @@
+body{
+    margin-left: 15%;
+    margin-right: 10%;
+}
+.box{
+    width: 350px;
+    border: solid 1px;
+    border-color: rgb(192, 192, 192);
+    border-radius: 5px;
+    overflow: hidden;
+    float:left;
+    margin-left: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.izq{
+    background-color: aqua;
+    width: 170px;
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.der{
+    background-color: red;
+    width: 170px;
+    height: 200px;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.textuno{
+    margin-top: 20px;
+    font-size: smaller;
+}
+
+.text{
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+.colores{
+    margin: 5px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+
+
+#infobot{
+    margin: 8px;
+}
+
+@keyframes color {
+    from {background-color: aqua;}
+    to {background-color: violet;}
+    
+}
+
+.color{
+    margin: 5px;
+    background-color: aqua;
+    width: 97%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.color:hover{
+    animation-name: color;
+    animation-duration: 2s;
+}
+.izq:hover{
+    background-color: purple;
+
+}
+
+.der:hover{
+    background-color: violet;
+}
+
+
+button{
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: gray;
+    cursor: pointer;
+  }

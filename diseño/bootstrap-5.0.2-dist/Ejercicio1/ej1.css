@@ -1,0 +1,23 @@
+.col-4, .col, .col-2{
+ border: solid 0.1px;
+ background-color: rgb(230, 222, 222);
+}
+
+
+.row{
+    margin-bottom: 60px;
+}
+
+.apartado{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#col1ap4{
+    height: 300px;
+}
+#col2ap4{
+    height: 25px;
+    margin-left: 7px;
+    margin-right: 10px;
+
+}
