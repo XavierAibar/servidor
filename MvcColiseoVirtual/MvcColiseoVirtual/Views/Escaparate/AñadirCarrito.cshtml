@@ -1,0 +1,96 @@
+﻿@model MvcColiseoVirtual.Models.Producto
+@{
+    ViewData["Title"] = "AñadirCarrito";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4 class="text-center">Añadir producto al carrito</h4>
+    <hr />
+    <dl class="row justify-content-center" style="margin-left: 32%">
+        <dd class="col-sm-10">
+            <div>
+                @{
+
+                    var nombreImagen = "imagen-no-disponible.jpg";
+                    if (Model.Imagen != null)
+                    {
+                        nombreImagen = Model.Imagen;
+                    }
+                }
+
+                <img src="~/images/@nombreImagen" style="width:250px; height:250px;" alt="No funciona" asp-append-version="true" />
+            </div>
+
+        </dd>
+    </dl>
+    <dl class="row" style="margin-left: 35%">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Texto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Texto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class="col-sm-10">
+            @String.Format("{0:c}", Model.Precio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Categoria.Descripcion)
+        </dd>
+        <dt class="col-sm-2">
+                <a asp-action="Index">Volver</a>
+        </dt>
+        <dd class="col-sm-10">
+            <br />
+            <form asp-action="AñadirCarrito">
+                <div class="form-group" hidden>
+                    @Html.DisplayFor(model => model.Id)
+                </div>
+                @{
+                    var stock = Model.Stock;
+                }
+                @if (stock <= 0)
+                {
+                    <div class="form-group">
+                        <input id="stock" type="submit" value="Añadir al carrito" class="btn btn-primary" asp-action="AñadirCarrito" hidden />
+                    </div>
+                }
+                else
+                {
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="form-group">
+                            <input id="stock" type="submit" value="Añadir al carrito" class="btn btn-primary" asp-action="AñadirCarrito" />
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="form-group">
+                            <input id="stock" type="button" value="Añadir al carrito" class="btn btn-primary" asp-page="~/Areas/Identity/Pages/Account/Manage/Register.cshtml" />
+                        </div>
+                    }
+                }
+            </form>
+        </dd>
+    </dl>
+</div>
+<br />
+

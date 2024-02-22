@@ -1,0 +1,15 @@
+﻿SET IDENTITY_INSERT [dbo].[Estados] ON
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (10, N'Pendiente')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (2, N'Confirmado')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (3, N'En carrito')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (4, N'Cobrado')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (5, N'Pendiente')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (6, N'Pendiente')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (7, N'Confirmado')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (8, N'Cobrado')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (9, N'En carrito')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (1, N'Cobrado')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (11, N'Preparado')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (12, N'Devuelto')
+INSERT INTO [dbo].[Estados] ([Id], [Descripcion]) VALUES (13, N'Anulado')
+SET IDENTITY_INSERT [dbo].[Estados] OFF

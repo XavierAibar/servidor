@@ -1,0 +1,207 @@
+﻿@model MvcColiseoVirtual.Models.Pedido;
+@using System.Globalization
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Carrito de la compra</h1>
+<h4>Pedido</h4>
+
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Id)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Id)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Fecha)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Fecha)
+    <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Confirmado)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Confirmado)
+    </dd>
+    @*<dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Preparado)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Preparado)
+    </dd>
+    <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Enviado)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Enviado)
+    </dd>
+    <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cobrado)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cobrado)
+    </dd>
+    <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Devuelto)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Devuelto)
+    </dd>
+    <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Anulado)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Anulado)
+    </dd>*@
+
+    <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+    </dd>
+    <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Estado)
+    </dt>
+    <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Estado.Descripcion)
+    </dd>
+</dl>
+
+
+<div>
+
+    <table class="table border-bottom">
+        <tr>
+            <th></th>
+            <th>Id Producto</th>
+            <th>Descripción del producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            @*<th>Descuento</th>*@
+            <th>Total</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Detalles)
+        {
+            <tr>
+
+                <td>
+                    @{
+                        var nombreImagen = "imagen-no-disponible.jpg";
+                        if (item.Producto.Imagen != null)
+                        {
+                            nombreImagen = item.Producto.Imagen;
+                        }
+                    }
+                    <img style="width:50px; height:50px;" src="~/images/@nombreImagen" asp-append-version="true" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Producto.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Producto.Descripcion)
+                </td>
+                <td>
+                    @if (item.Cantidad <= 1)
+                    {
+                        <a asp-action="MenosCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="btn btn-primary" hidden>-</a>
+                    }
+                    else
+                    {
+                        <a asp-action="MenosCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="btn btn-primary">-</a>
+                    }
+
+
+
+
+                    @Html.DisplayFor(modelItem => item.Cantidad)
+
+                    @if (item.Producto.Stock == item.Cantidad)
+                    {
+                        <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="btn btn-primary" hidden>+</a>
+                    }
+                    else
+                    {
+                        <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="btn btn-primary">+</a>
+                    }
+
+
+
+
+
+                </td>
+                <td>
+                    @item.Producto.Precio.ToString("C", new CultureInfo("es-ES"))
+                    @*@Html.DisplayFor(modelItem => item.Producto.Precio)*@
+                </td>
+               @* <td>
+                    <p>0,00</p>
+                </td>*@
+                <td>
+                    @{
+                        decimal precio = 0;
+                        decimal total = 0;
+
+
+                        precio = item.Precio * item.Cantidad;
+
+                        total = total + precio;
+                    }
+
+                    <p>@precio.ToString("C", new CultureInfo("es-ES"))</p>
+
+
+                </td>
+                <td>
+                    <form asp-action="EliminarLinea">
+                        <input class="btn btn-primary" type="submit" value="Eliminar" asp-action="EliminarLinea" asp-controller="Carrito" asp-route-id="@item.Id" />
+                    </form>
+                </td>
+
+            </tr>
+        }
+        @{
+            decimal totalProducto = 0;
+            decimal totalFinal = 0;
+        }
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            @*<th></th>*@
+            <th>Total:</th>
+            <th>
+                @foreach (var item in Model.Detalles)
+                {
+                    totalProducto = item.Precio * item.Cantidad;
+                    totalFinal = totalFinal + totalProducto;
+                }
+                @totalFinal.ToString("C", new CultureInfo("es-ES"))
+            </th>
+        </tr>
+
+    </table>
+
+
+
+    <form asp-action="ConfirmarPedido" class="container-fluid text-center">
+        <input class="btn btn-success" type="submit" value="Confirmar Pedido" asp-action="ConfirmarPedido" asp-controller="Carrito" asp-route-id="@Model.Id" />
+    </form>
+
+
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+<a asp-action="Index" asp-controller="Escaparate">Seguir Comprando</a>

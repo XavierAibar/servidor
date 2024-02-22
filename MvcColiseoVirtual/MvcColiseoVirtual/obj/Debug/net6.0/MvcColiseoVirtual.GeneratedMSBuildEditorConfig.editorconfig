@@ -175,6 +175,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/Carrito/CarritoVacio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xDYXJyaXRvVmFjaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/Carrito/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/Categorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -235,6 +243,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/Escaparate/AñadirCarrito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYXBhcmF0ZVxBw7FhZGlyQ2Fycml0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/Escaparate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYXBhcmF0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/Estados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -261,6 +277,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/MisDatos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzRGF0b3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/MisDatos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzRGF0b3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/MisPedidos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzUGVkaWRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/MisPedidos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzUGVkaWRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/xavaibmar.AULA2508/Desktop/git/servidor/servidor/MvcColiseoVirtual/MvcColiseoVirtual/Views/Pedidos/Create.cshtml]

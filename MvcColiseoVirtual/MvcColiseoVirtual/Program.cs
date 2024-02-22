@@ -33,6 +33,16 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredLength = 6;
     options.Password.RequiredUniqueChars = 1;
 });
+
+// Configurar el estado de la sesión
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(20);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 var app = builder.Build();
 
 // Configuración de los servicios de ASP.NET Core Identity
@@ -57,6 +67,10 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Configurar el estado de la sesión
+app.UseSession();
+
 
 app.MapControllerRoute(
     name: "default",
