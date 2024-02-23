@@ -2,8 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Coliseo Virtual</h1>
-    <p>Bienvenidos a nuestra tienda de productos relacionados con los videojuegos y el anime.</p>
-    <img src="~/images/logotitulo.png"/>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-3 d-none d-xl-block justify-content-left">
+            <img src="~/images/pilar.jpg" style="height: 650px; width:250px;" />
+        </div>
+        <div class="col-12 col-md-5 text-center justify-content-center g-0">
+            <h1 class="display-4">Coliseo Virtual</h1>
+            <p>Bienvenidos a nuestra tienda de productos relacionados con los videojuegos y el anime.</p>
+            <img class="d-flex" src="~/images/logotitulo.png" style=" height: 600px; width:100%" />
+        </div>
+        <div class="col-3 d-none d-xl-block justify-content-right">
+            <img src="~/images/pilar.jpg" style="height: 650px; margin-left:50px;width:250px; " />
+        </div>
+    </div>
 </div>

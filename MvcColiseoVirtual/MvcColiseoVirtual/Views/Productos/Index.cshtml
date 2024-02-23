@@ -70,41 +70,52 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Texto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+                @*
             <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Texto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Precio)
-            </td>
-            @*
-            <td>
-                @Html.DisplayFor(modelItem => item.PrecioCadena)
+            @Html.DisplayFor(modelItem => item.PrecioCadena)
             </td>
             *@
-            <td>
-                @Html.DisplayFor(modelItem => item.Stock)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Escaparate)
-            </td>
-            <td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </td>
+                @*@Html.DisplayFor(modelItem => item.Escaparate)*@
+                @if (item.Escaparate == true)
+                {
+                    <td>
+                        Visible
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        No visible
+                    </td>
+                }
+                <td>
                     @{
                         var nombreImagen = "imagen-no-disponible.jpg";
                         if (item.Imagen != null)
                         {
                             nombreImagen = item.Imagen;
                         }
-                            <img src="~/images/@nombreImagen" height="250" width="250" asp-append-version="true" />
-                        }
+                        <img src="~/images/@nombreImagen" height="250" width="250" asp-append-version="true" />
+                    }
                 </td>
                 @*
             <td>
-                @Html.DisplayFor(modelItem => item.Imagen)
+            @Html.DisplayFor(modelItem => item.Imagen)
             </td>
             *@
 
@@ -117,7 +128,7 @@
                     <a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
                 </td>
             </tr>
-}
+        }
     </tbody>
 </table>
 @* Poner botones de página Siguiente y Anterior *@

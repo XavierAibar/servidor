@@ -5,27 +5,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div style="text-align:center;">
-    @{
 
-        <h1 style="text-align:left;">Escaparate</h1>
-        <hr />
-    }
-</div>
 <div class="container-fluid">
     <div class="row">
+
         <div class="col-lg-3 col-md-12 col-sm-12">
-            <table class="table">
+            <table id="tabla" class="table table-striped">
                 @foreach (var i in ViewData["ListaCategorias"] as IEnumerable<Categoria>)
                 {
                     <tr>
                         <td>
-                            <a asp-action="Index" asp-route-id="@i.Id">@i.Descripcion.ToString()</a>
+                            <a style="text-decoration:none;" class="text-dark" asp-action="Index" asp-route-id="@i.Id">@i.Descripcion.ToString()</a>
                         </td>
                     </tr>
                 }
             </table>
         </div>
+
+
 
         @*Tarjetas de productos*@
 
@@ -33,7 +30,7 @@
             <div class="card-columns" style="width: 1100px;">
                 @foreach (var item in Model)
                 {
-                    <div class="card" style="width:270px; height:497px; text-align:center; display:inline-block; margin-left:47px; margin-top:25px;">
+                    <div class="card" style="width:270px; height:497px; text-align:center;">
                         @{
                             var nombreImagen = "Imagen-no-disponible.jpg";
                             var stock = item.Stock;
@@ -41,31 +38,31 @@
                             {
                                 nombreImagen = item.Imagen;
                             }
-                            <img class="card-img-top" style="width:150px;height:200px; margin-top: 15px;" src="~/images/@nombreImagen" />
-                            <h5 class="card-text" style="text-decoration:underline; height:50px; margin-top:10px;">@Html.DisplayFor(modelItem => item.Descripcion)</h5>
-                            <hr style="width:75%; margin-left:12.5%; margin-top:-20px;">
-                            <p class="card-text" style="height:50px; margin-top:-5px;">@Html.DisplayFor(modelItem => item.Texto)</p>
-                            <h2 style="color:midnightblue; margin-top:-10px;">@String.Format("{0:c}", item.Precio)</h2>
-                            <hr style="width:75%; margin-left:12.5%;">
+                                    <img class="card-img-top" style="width:150px;height:200px; margin-top: 15px;" src="~/images/@nombreImagen" />
+                                    <h5 class="card-text" style="height:50px; margin-top:10px;">@Html.DisplayFor(modelItem => item.Descripcion)</h5>
+                                    <hr style="width:75%; margin-left:12.5%; margin-top:-20px;">
+                                    <p class="card-text" style="height:50px; margin-top:-5px;">@Html.DisplayFor(modelItem => item.Texto)</p>
+                                    <h2 style="color:midnightblue; margin-top:-10px;">@String.Format("{0:c}", item.Precio)</h2>
+                                    <hr style="width:75%; margin-left:12.5%;">
                             if (item.Stock >= 0)
                             {
-                                <p>Unidades disponibles: @Html.DisplayFor(modelItem => item.Stock)</p>
+                                        <p>Unidades disponibles: @Html.DisplayFor(modelItem => item.Stock)</p>
                             }
                             else
                             {
-                                <p>Unidades disponibles: 0</p>
+                                        <p>Unidades disponibles: 0</p>
                             }
                             if (stock > 0)
                             {
-                                <div class="card-footer" style="width:auto;">
-                                    <a asp-action="AñadirCarrito" asp-route-id="@item.Id" class="btn btn-success">Añadir al carrito</a>
-                                </div>
+                                        <div class="card-footer" style="width:auto;">
+                                            <a asp-action="AñadirCarrito" asp-route-id="@item.Id" class="btn btn-dark">Añadir al carrito</a>
+                                        </div>
                             }
                             else
                             {
-                                <div class="card-footer" style="width:auto;">
-                                    <a class="btn btn-danger">Sin stock</a>
-                                </div>
+                                        <div class="card-footer" style="width:auto;">
+                                            <a class="btn btn-danger">Sin stock</a>
+                                        </div>
                             }
                         }
                     </div>
