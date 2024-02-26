@@ -82,7 +82,6 @@ namespace MvcColiseoVirtual.Controllers
             //Crear objetos pedido y detalle a agregar
             Pedido pedido = new Pedido();
             Detalle detalle = new Detalle();
-            HttpContext.Session.Remove("NumPedido");
 
             if (User.Identity.IsAuthenticated && await _context.Clientes.AnyAsync(p => p.Email == User.Identity.Name))
             {

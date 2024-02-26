@@ -3,6 +3,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Carrito Vacio</h1>
-<hr/>
-<p>No hay productos en el carrito, añade productos del <a asp-area="" asp-controller="Escaparate" asp-action="Index">escaparate</a>.</p>
+<div class="row">
+    <div class="col-12 text-center">
+        <img src="~/images/nocarrito.png" alt="Carrito Vacío" style="width=70%;" />
+        <p>Para añadir productos, hazlo <a asp-area="" asp-controller="Escaparate" asp-action="Index">aquí</a>.</p>
+    </div>
+</div>

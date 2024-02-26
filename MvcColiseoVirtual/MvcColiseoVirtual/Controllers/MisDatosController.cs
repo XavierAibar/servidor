@@ -24,7 +24,7 @@ namespace MvcColiseoVirtual.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult>
-       Create([Bind("Id,Nombre,Email,Telefono,FechaNacimiento")] Cliente cliente)
+       Create([Bind("Id,Nombre,Email,Telefono,Direccion,Poblacion,CodigoPostal,Nif")] Cliente cliente)
         {
             // Asignar el Email del usuario actual
             cliente.Email = User.Identity.Name;

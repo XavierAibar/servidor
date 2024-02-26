@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q2Sj5XwOrMdR6LygEvmeLKyRp+G8bsf70mljq5e1heA=",
+  "Hash": "K6EchusxigeZzbektlcN4plIY8uexPL8LjxE0+T5mgo=",
   "Source": "MvcColiseoVirtual",
   "BasePath": "_content/MvcColiseoVirtual",
   "Mode": "Default",
@@ -1426,6 +1426,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\minato.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\images\\nocarrito.png",
+      "SourceId": "MvcColiseoVirtual",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\",
+      "BasePath": "_content/MvcColiseoVirtual",
+      "RelativePath": "images/nocarrito.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\nocarrito.png"
     },
     {
       "Identity": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\images\\pilar.jpg",

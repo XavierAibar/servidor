@@ -5,22 +5,21 @@
     ViewData["Title"] = "Iniciar sesión";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="text-center">@ViewData["Title"]</h1>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="margin-left:34%">
         <section>
             <form id="account" method="post">
-                <h2>Inicia sesión con una cuenta ya creada.</h2>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating">
                     <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                    <label asp-for="Input.Email" class="form-label"></label>
+                    <label asp-for="Input.Email" class="form-label">Correo Electrónico</label>
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div class="form-floating">
                     <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                    <label asp-for="Input.Password" class="form-label"></label>
+                    <label asp-for="Input.Password" class="form-label">Contraseña</label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
                 <div>
@@ -32,8 +31,9 @@
                     </div>
                 </div>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Iniciar sesión</button>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary" style="margin-top:20px;">Iniciar sesión</button>
                 </div>
+                <br />
                 <div>
                     <p>
                         <a id="forgot-password" asp-page="./ForgotPassword">¿Has olvidado tu contraseña?</a>
@@ -46,35 +46,6 @@
                     </p>
                 </div>
             </form>
-        </section>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Inicia sesión de otra manera.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            Todavia no hemos implementado esta función.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
         </section>
     </div>
 </div>
