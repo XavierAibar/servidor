@@ -7,7 +7,7 @@
 <h1>Pedidos</h1>
 
 <p>
-    <a asp-action="Create">Crear Nuevo</a>
+    <a asp-action="Create" class="btn btn-dark">Crear Nuevo</a>
 </p>
 <table class="table">
     <thead>
@@ -19,20 +19,20 @@
                 @Html.DisplayNameFor(model => model.Confirmado)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Preparado)
-            </th>
+@*                @Html.DisplayNameFor(model => model.Preparado)
+*@            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Enviado)
-            </th>
+@*                @Html.DisplayNameFor(model => model.Enviado)
+*@            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cobrado)
-            </th>
+@*                @Html.DisplayNameFor(model => model.Cobrado)
+*@            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Devuelto)
-            </th>
+@*                @Html.DisplayNameFor(model => model.Devuelto)
+*@            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Anulado)
-            </th>
+@*                @Html.DisplayNameFor(model => model.Anulado)
+*@            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cliente)
             </th>
@@ -73,9 +73,9 @@
                 @Html.DisplayFor(modelItem => item.Estado.Descripcion)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-dark">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-dark">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-dark">Borrar</a>
             </td>
         </tr>
 }

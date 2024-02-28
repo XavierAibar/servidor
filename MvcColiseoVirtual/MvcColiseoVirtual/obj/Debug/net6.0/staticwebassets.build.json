@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K6EchusxigeZzbektlcN4plIY8uexPL8LjxE0+T5mgo=",
+  "Hash": "x60qaEvs/GtqwDLehAZUeEkuq6B6PqKqSzbcYBUKMqI=",
   "Source": "MvcColiseoVirtual",
   "BasePath": "_content/MvcColiseoVirtual",
   "Mode": "Default",
@@ -1275,6 +1275,23 @@
       "OriginalItemSpec": "wwwroot\\images\\camishingeki.jpg"
     },
     {
+      "Identity": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\images\\carrito.png",
+      "SourceId": "MvcColiseoVirtual",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\",
+      "BasePath": "_content/MvcColiseoVirtual",
+      "RelativePath": "images/carrito.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\carrito.png"
+    },
+    {
       "Identity": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\images\\ellie.jpg",
       "SourceId": "MvcColiseoVirtual",
       "SourceType": "Discovered",
@@ -1290,6 +1307,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\ellie.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\images\\Flecha.png",
+      "SourceId": "MvcColiseoVirtual",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\",
+      "BasePath": "_content/MvcColiseoVirtual",
+      "RelativePath": "images/Flecha.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Flecha.png"
     },
     {
       "Identity": "C:\\Users\\xavaibmar.AULA2508\\Desktop\\git\\servidor\\servidor\\MvcColiseoVirtual\\MvcColiseoVirtual\\wwwroot\\images\\funkochloe.jpg",

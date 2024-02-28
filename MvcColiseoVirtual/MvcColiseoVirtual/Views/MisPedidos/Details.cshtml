@@ -178,12 +178,13 @@
                 }
                 else
                 {
-                    <div style="width:auto;">
-                        <a class="btn btn-danger" style="margin-left:85%;">Sin stock</a>
-                    </div>
+
+        <div class="d-print-none text-center">
+            <a class="btn btn-primary" href="javascript:window.print()">Imprimir</a>
+        </div>
                 }
 }
 
 <div>
-    <a asp-action="Index">Volver a mis pedidos</a>
+    <a asp-action="Index" class="btn btn-primary">Volver a mis pedidos</a>
 </div>

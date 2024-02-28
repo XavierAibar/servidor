@@ -9,7 +9,7 @@
 <h1>Productos</h1>
 
 <p>
-    <a asp-action="Create">Crear Nuevo</a>
+    <a asp-action="Create" class="btn btn-dark">Crear Nuevo</a>
 </p>
 
 <form asp-action="Index">
@@ -123,9 +123,10 @@
                     @Html.DisplayFor(modelItem => item.Categoria.Descripcion)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-dark">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-dark">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-dark">Borrar</a> |
+                    <a asp-action="CambiarImagen" asp-route-id="@item.Id" class="btn btn-dark">Cambiar imagen</a>
                 </td>
             </tr>
         }

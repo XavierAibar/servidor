@@ -23,8 +23,9 @@ namespace MvcColiseoVirtual.Controllers
 
 
 		// GET: MisPedidos
-		public async Task<IActionResult> Index()
+		public async Task<IActionResult> Index(int? pageNumber)
 		{
+
 			// Se selecciona el empleado correspondiente al usuario actual
 			string emailCliente = User.Identity.Name;
 

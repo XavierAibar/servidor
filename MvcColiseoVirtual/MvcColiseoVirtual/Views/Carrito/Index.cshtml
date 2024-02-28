@@ -10,7 +10,7 @@
 
 <hr />
 
-<dl class="row">
+<dl class="row" style="margin-left:40%; margin-bottom:5%;">
     <dt class="col-sm-2">
         @Html.DisplayNameFor(model => model.Id)
     </dt>
@@ -125,11 +125,11 @@
 
                     @if (item.Producto.Stock == item.Cantidad)
                     {
-                        <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="btn btn-primary" hidden>+</a>
+                        <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="btn btn-primary" style="height:50%;" hidden>-</a>
                     }
                     else
                     {
-                        <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="btn btn-primary">+</a>
+                        <a asp-action="MasCantidad" asp-controller="Carrito" asp-route-id="@item.Id" class="btn btn-primary" style="height:50%;">+</a>
                     }
 
 
@@ -204,4 +204,4 @@
 <br />
 <br />
 <br />
-<a asp-action="Index" asp-controller="Escaparate">Seguir Comprando</a>
+<a asp-action="Index" asp-controller="Escaparate" class="btn btn-dark">Seguir Comprando</a>

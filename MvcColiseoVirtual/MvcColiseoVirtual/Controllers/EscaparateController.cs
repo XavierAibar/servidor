@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MvcColiseoVirtual.Models;
 using MvcColiseoVirtual.Data;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace MvcColiseoVirtual.Controllers
 {

@@ -4,21 +4,35 @@
     ViewData["Title"] = "Escaparate";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<a name="Aqui"></a>
 
+<style>
+    .btn {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; /* Asegura que el ancho incluya el padding y el borde */
+    }
+</style>
 
 <div class="container-fluid">
+
     <div class="row">
 
         <div class="col-lg-3 col-md-12 col-sm-12 text-center" style="margin-top:200px;">
-            <table id="tabla" class="table table-bordered table-hover table-bordered">
+            <table id="tabla" class="table table-bordered table-hover table-bordered shadow ">
+                <td>
+                    <a class="text-dark text-decoration-none btn" href="../../Escaparate">Ver todo</a>
+                </td>
                 @foreach (var i in ViewData["ListaCategorias"] as IEnumerable<Categoria>)
                 {
                     <tr>
                         <td>
-                            <a style="text-decoration:none;" class="text-dark" asp-action="Index" asp-route-id="@i.Id">@i.Descripcion.ToString()</a>
+                            <a style="text-decoration:none;" class="text-dark btn" asp-action="Index" asp-route-id="@i.Id">@i.Descripcion.ToString()</a>
                         </td>
                     </tr>
                 }
+
+
             </table>
         </div>
 
@@ -27,6 +41,7 @@
         @*Tarjetas de productos*@
 
         <div class="col-lg-9 col-md-12 col-sm-12">
+            <a class="fixed-bottom" style="margin-left:70px; margin-left:70px;" href="#Aqui"><img width="40" height="40" src="~/images/Flecha.png" /></a>
             <div class="card-columns" style="width: 1100px;">
                 @foreach (var item in Model)
                 {
@@ -38,24 +53,24 @@
                             {
                                 nombreImagen = item.Imagen;
                             }
-                                <img class="card-img-top" style="width:200px;height:200px; margin-top: 15px;" src="~/images/@nombreImagen"/>
                                 <h5 class="card-text" style=" height:50px; margin-top:10px;">@Html.DisplayFor(modelItem => item.Descripcion)</h5>
                                 <hr style="width:75%; margin-left:12.5%; margin-top:-20px;">
-                                <p class="card-text" style="height:50px; margin-top:-5px;">@Html.DisplayFor(modelItem => item.Texto)</p>
-                                <h2 style="color:midnightblue; margin-top:-10px;">@String.Format("{0:c}", item.Precio)</h2>
+                                <img class="card-img-top" style="width:200px;height:200px; margin-top: 15px;" src="~/images/@nombreImagen" />
+                                <hr style="width:75%; margin-left:12.5%; margin-top:20px;">
+                                <h2 class="text-black" style="margin-top:-10px;">@String.Format("{0:c}", item.Precio)</h2>
                                 <hr style="width:75%; margin-left:12.5%;">
-                            if (item.Stock >= 0)
+                            if (item.Stock > 0)
                             {
-                                    <p>Unidades disponibles: @Html.DisplayFor(modelItem => item.Stock)</p>
+                                    <p>Unidades restantes: @Html.DisplayFor(modelItem => item.Stock)</p>
                             }
                             else
                             {
-                                    <p>Unidades disponibles: 0</p>
+                                    <p>No quedan unidades.</p>
                             }
                             if (stock > 0)
                             {
                                     <div class="card-footer" style="width:auto;">
-                                        <a asp-action="AñadirCarrito" asp-route-id="@item.Id" class="btn btn-dark">Añadir al carrito</a>
+                                        <a asp-action="AñadirCarrito" asp-route-id="@item.Id" class="btn btn-dark" style="margin-top:10px;">Añadir al carrito</a>
                                     </div>
                             }
                             else

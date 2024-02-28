@@ -11,31 +11,35 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Fecha)
+                @*@Html.DisplayNameFor(model => model.Fecha)*@
+                Fecha
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Confirmado)
+                @*@Html.DisplayNameFor(model => model.Confirmado)*@
+                Confirmado
             </th>
-           @* <th>
-                @Html.DisplayNameFor(model => model.Preparado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Enviado)
+            @* <th>
+            @Html.DisplayNameFor(model => model.Preparado)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cobrado)
+            @Html.DisplayNameFor(model => model.Enviado)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Devuelto)
+            @Html.DisplayNameFor(model => model.Cobrado)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Anulado)
+            @Html.DisplayNameFor(model => model.Devuelto)
+            </th>
+            <th>
+            @Html.DisplayNameFor(model => model.Anulado)
             </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.Cliente)
+                @* @Html.DisplayNameFor(model => model.Cliente)*@
+                Cliente
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Estado)
+                @*@Html.DisplayNameFor(model => model.Estado)*@
+                Estado
             </th>
             <th></th>
         </tr>
@@ -51,20 +55,20 @@
                     @Html.DisplayFor(modelItem => item.Confirmado)
                 </td>
                 @*<td>
-                    @Html.DisplayFor(modelItem => item.Preparado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Enviado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cobrado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Devuelto)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Anulado)
-                </td>*@
+            @Html.DisplayFor(modelItem => item.Preparado)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Enviado)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Cobrado)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Devuelto)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Anulado)
+            </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.Cliente.Nombre)
                 </td>
@@ -73,7 +77,7 @@
                 </td>
                 <td>
 
-                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-dark">Detalles</a>
 
                 </td>
             </tr>
