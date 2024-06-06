@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contactanos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container-fluid bg-opacity-10 bg-secondary mb-4">
+        <div class="row">
+            <div class="navbar navbar-expand-lg">
+                <div class="container-fluid" style="padding-left: 7%; padding-right: 7%;">
+                    <a href="index.html" class="navbar-brand mb-1"><img src="Imagenes/ENIUN.png" alt="" width="90px" height="45px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav me-auto mb-2">
+                            <div class="dropdown">
+                                <button class="btn bg-transparent dropdown-toggle nav-link text-black" data-bs-toggle="dropdown" type="button">Servicios</button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="dropdown-item">SEO</a></li>
+                                    <hr class="dropdown-divider">
+                                    <li><a href="#" class="dropdown-item">Desarrollo web</a></li>
+                                    <hr class="dropdown-divider">
+                                    <li><a href="#" class="dropdown-item">Marketing online</a></li>
+                                </ul>
+                            </div>
+                            <li class="nav-item"><a href="contact.html" class="nav-link"><nav class="text-black">Contacto</nav></a></li>
+                            <li class="nav-item"><a href="table.html" class="nav-link"><nav class="text-black">Tablas</nav></a></li>
+                        </ul>
+                        <form role="search" class="d-flex">
+                            <input type="search" class="form-comtrol me-3" placeholder="Buscar..." style="border-color: transparent; border-radius: 6%;">
+                            <button class="btn btn-info rounded-1 text-light" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-opacity-10 bg-secondary mb-4 mt-4">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h1 class="text-center mt-3">Contáctanos</h1>
+                <p class="text-center">Danos detalles sobre tu problema y nosotros encontraremos la solución</p>
+                <hr style="border-top: 3px dotted #ff0000; margin: 20px;"> 
+            </div>
+            <div class="col-10 mt-3">
+                <div class="container">
+                    <form action="#" method="post">
+
+                        <fieldset>
+                                <legend class="text-center mb-3">Información personal</legend>
+                
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Introduce tu nombre..." required>
+                                <div class="form-text">(Obligatorio)</div>
+                            </div>
+                
+                            <div class="mb-3">
+                                <label for="apellidos" class="form-label">Apellidos:</label>
+                                <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Introduce tus apellidos...">
+                            </div>
+                
+                            <div class="mb-3">
+                                <label for="Correo" class="form-label">Correo electrónico:</label>
+                                <input type="email" id="Correo" name="Correo" class="form-control" placeholder="Correo@gmail.com" required>
+                                <div class="form-text">(Obligatorio)</div>
+                            </div>
+                
+                            <div class="mb-3">
+                                <label for="nacimiento" class="form-label">Fecha de nacimiento:</label>
+                                <input type="date" id="nacimiento" name="nacimiento" class="form-control" required>
+                                <div class="form-text">(Obligatorio)</div>
+                            </div>
+                        </fieldset>
+                        
+                        <hr>
+
+                        <fieldset>
+                            <legend class="text-center">¿Cual es tu problema?</legend>
+                            <div class="mb-3">
+                                <label for="sugerencias" class="form-label"></label>
+                                <textarea id="sugerencias" name="sugerencias" class="form-control" cols="30" rows="5"
+                                    placeholder="Escribe aquí..." required></textarea>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                        <div class="col-4">
+                                <label for="rango" class="form-label">¿Nustra página te resulta facil de usar?:</label>
+                                <input type="range" class="form-range" id="rango" min="0" max="10" step="5">
+                                <div class="d-flex justify-content-between">
+                                    <p class="form-text">No</p>
+                                    <p class="form-text">Sí</p>
+                                </div>
+                        </fieldset>
+                        </div>
+                        <p> Aceptas los terminos del contacto de licencia de enviamiento de informacion </p>
+                        <p>
+                            Acepto   <input type="radio" name="Licencia" required><br>
+                            No acepto  <input checked type="radio" name="Licencia">
+                        </p>
+                        <p class="text-center"> <input class="btn btn-dark text-light" type="submit" value="enviar datos"> 
+                        <input class="btn btn-dark text-light" type="reset" value="borrar datos"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </form>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row bg-info mt-5 p-3 text-light ">
+            <div class="col-6 mb-4 pt-4 footer fs-5">Eniun.com</div>
+            <div class="col-6 pt-4 footer">
+                <div class="text-end">Política de privacidad y cookies</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
